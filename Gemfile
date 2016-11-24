@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'net-ssh'
+gem 'net-ssh', '~> 2.9.2'
 gem 'figaro'
 group :development do
   gem 'capistrano'

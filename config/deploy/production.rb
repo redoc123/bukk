@@ -41,11 +41,16 @@
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+ # set :ssh_options, {
+ #   keys: %w(/Users/bhanunemani/projects/aws-beekon/books.pem),
+ #   forward_agent: true,
+ #   use_agent: false
+ #  #  auth_methods: %w(password)
+ # }
+ set :ssh_options, {
+   config: false,
+   auth_methods: %w(password)
+ }
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
@@ -60,4 +65,4 @@
 #     # password: 'please use keys'
 #   }
 
-server '35.154.48.28', user: 'deploy', roles: %w{web app db}
+server '35.154.53.203', user: 'deploy', roles: %w{web app db}
